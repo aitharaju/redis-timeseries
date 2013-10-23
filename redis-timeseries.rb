@@ -4,7 +4,7 @@ class RedisTimeSeries
 	def initialize redis
 		server = redis[:sever]
 		port = redis[:port]
-        @redis = Redis.new(:host => server , :port => port)
+        	@redis = Redis.new(:host => server , :port => port)
 	end
 
 	# key 
@@ -30,9 +30,9 @@ class RedisTimeSeries
 		start_time = Time.at(start_date.to_i).to_datetime
 		end_time = Time.at(end_date.to_i).to_datetime
 		graph = []
-		key = "#{user_id}:posts"
 		filter_by=@filter_by
-
+		
+		# work in progress
 		if filter_by == 'year' || filter_by == 'month'
 			return ''
 		end
